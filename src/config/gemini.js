@@ -11,9 +11,10 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-require('dotenv').config( {path: 'c:/Users/pc/Desktop/Freecodecamp/React Project/gemini-clone/Gemini-clone/.env'} );
+// this for environment variable configuration using dotenv
+require('dotenv').config();
 
-const apiKey = "process.env.REACT_APP_API_KEY;";
+const apiKey = process.env.REACT_APP_MY_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
