@@ -11,10 +11,7 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-// this for environment variable configuration using dotenv
-require('dotenv').config();
-
-const apiKey = process.env.REACT_APP_MY_API_KEY;
+const apiKey = "AIzaSyBi1T6JFOUWT9rAMqST3ZyalwV3yy2OFQg";
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
@@ -40,7 +37,7 @@ async function run(prompt) {
   const result = await chatSession.sendMessage(prompt);
   console.log(result.response.text());
   const response = result.response;
-  return response.text()
+  return response.text();
 }
 
 export default run;
